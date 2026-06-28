@@ -3,7 +3,7 @@ import { Task, CreateTaskDto, UpdateTaskDto } from '@/types';
 // ── Switch to false for offline/demo mode ────────────────────────────────────
 const USE_REAL_API = true;
 // Vite proxy in vite.config.ts forwards /api → http://localhost:5000
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL + '/api';
 
 // ─── localStorage Mock ───────────────────────────────────────────────────────
 const STORAGE_KEY = 'task_tracker_tasks';
